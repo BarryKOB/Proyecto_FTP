@@ -1,0 +1,30 @@
+evidencia de conexión exitosa desde srweb a ldap de srvinfra 
+
+vboxuser@srvweb:/$ ldapsearch -x -H ldap://192.168.1.50 -b "ou=grupos,dc=centro,dc=local" "(objectClass=posixGroup)"
+# extended LDIF
+#
+# LDAPv3
+# base <ou=grupos,dc=centro,dc=local> with scope subtree
+# filter: (objectClass=posixGroup)
+# requesting: ALL
+#
+
+# profesores, grupos, centro.local
+dn: cn=profesores,ou=grupos,dc=centro,dc=local
+objectClass: posixGroup
+cn: profesores
+gidNumber: 10001
+
+# alumnos, grupos, centro.local
+dn: cn=alumnos,ou=grupos,dc=centro,dc=local
+objectClass: posixGroup
+cn: alumnos
+gidNumber: 10002
+
+# search result
+search: 2
+result: 0 Success
+
+# numResponses: 3
+# numEntries: 2
+vboxuser@srvweb:/$ 
