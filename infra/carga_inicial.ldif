@@ -1,0 +1,69 @@
+dn: ou=usuarios,dc=centro,dc=local
+objectClass: organizationalUnit
+ou: usuarios
+
+dn: ou=grupos,dc=centro,dc=local
+objectClass: organizationalUnit
+ou: grupos
+
+dn: cn=profesores,ou=grupos,dc=centro,dc=local
+objectClass: posixGroup
+cn: profesores
+gidNumber: 10001
+
+dn: cn=alumnos,ou=grupos,dc=centro,dc=local
+objectClass: posixGroup
+cn: alumnos
+gidNumber: 10002
+
+dn: uid=alumno1,ou=usuarios,dc=centro,dc=local
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+cn: Alumno1
+sn: Alumno1
+uid: alumno1
+userPassword: {SSHA}9xKPhNCZiIVK6gRreBIfmIYQVPMZADt8
+uidNumber: 20001
+gidNumber: 10002
+homeDirectory: /home/alumno1
+loginShell: /bin/bash
+
+dn: uid=alumno2,ou=usuarios,dc=centro,dc=local
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+cn: Alumno2
+sn: Alumno2
+uid: alumno2
+userPassword: {SSHA}9xKPhNCZiIVK6gRreBIfmIYQVPMZADt8
+uidNumber: 20002
+gidNumber: 10002
+homeDirectory: /home/alumno2
+loginShell: /bin/bash
+
+dn: uid=profalumno1,ou=usuarios,dc=centro,dc=local
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+cn: Profesor1
+sn: Profesor1
+uid: profalumno1
+userPassword: {SSHA}9xKPhNCZiIVK6gRreBIfmIYQVPMZADt8
+uidNumber: 20003
+gidNumber: 10001
+homeDirectory: /home/profalumno1
+loginShell: /bin/bash
+
+dn: uid=profalumno2,ou=usuarios,dc=centro,dc=local
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+cn: Profesor2
+sn: Profesor2
+uid: profalumno2
+userPassword: {SSHA}9xKPhNCZiIVK6gRreBIfmIYQVPMZADt8
+uidNumber: 20004
+gidNumber: 10001
+homeDirectory: /home/profalumno2
+loginShell: /bin/bash
